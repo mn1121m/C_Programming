@@ -12,38 +12,31 @@ int main(void)
     if(total_income > 10000){
         printf("%d * 0.9 = %.f천원\n", 10000, (10000 * 0.09));
         sumTax += (10000 * 0.09);
-        printf("sumTax = %d\n", sumTax);
 
         if(total_income > 40000){
             printf("%d * 0.18 = %.f천원\n", 30000, (30000 * 0.18));
             sumTax += (30000 * 0.18);
-            printf("sumTax = %d\n", sumTax);
 
             if(total_income > 80000){
                 printf("%d * 0.27 = %.f천원\n", 40000, (40000 * 0.27));
                 sumTax += (40000 * 0.27);
-                printf("sumTax = %d\n", sumTax);
 
                 printf("%d * 0.36 = %.f천원\n", total_income - 80000, (total_income - 80000) * 0.36);
                 sumTax += (total_income - 80000) *0.36;
-                printf("sumTax = %d\n", sumTax);
             }
             else {
                 printf("%d * 0.27 = %.f천원\n",total_income - 40000, (total_income - 40000) * 0.27);
                 sumTax += (total_income - 40000) * 0.27;
-                printf("sumTax = %d\n", sumTax);
             }
         }
         else {
             printf("%d * 0.18 = %.f천원\n", total_income - 10000, (total_income - 10000) * 0.18);
             sumTax += (total_income - 10000) * 0.18;
-            printf("sumTax = %d\n", sumTax);
         }
     }
     else {
         printf("%d * 0.18 = %.f천원\n", total_income, total_income * 0.09);
         sumTax += total_income * 0.09;
-        printf("sumTax = %d\n", sumTax);
     }
     printf("합계 = %d천원\n", sumTax);
 
