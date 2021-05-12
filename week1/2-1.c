@@ -15,7 +15,7 @@ int main(void)
     printf("(8) 1 | 3 & 11 : %d\n", 1 | 3 & 11);    // 1 & 11 : 
     printf("(9) sizeof 'a' + sizeof(char) : %lu\n", sizeof'a' + sizeof(char));
     int a, b; 
-    printf("(10) int a, b; a= 1 : %d; b = a = 3; : %d\n", a = 1 , b = a = 3);
+    printf("(10) int a, b; a= 1 : %d; b = a = 3; : %d\n", (a = 1) ? 1: 0 , (b = a = 3) ? 1: 0);
     a = 16;
     printf("(11) int a = 16; a << 2: %d; a <<=2; : %d\n", a <<2 , a <<=2);
 
