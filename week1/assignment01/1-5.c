@@ -1,7 +1,6 @@
 /* 1.pdf - 문제 5 */
 
 #include <stdio.h>
-#include <stdlib.h>
 
 int main(void)
 {

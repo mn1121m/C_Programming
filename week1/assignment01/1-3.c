@@ -1,7 +1,6 @@
 /* 1.pdf - 문제 3 */
 
 #include <stdio.h>
-#include <stdlib.h>
 
 #define MYSTR1 "2012123456"
 #define MYSTR2 "홍길동"

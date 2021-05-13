@@ -1,12 +1,15 @@
 /* 4.pdf - 문제 2 */
 #include <stdio.h>
 
+#define TRUE 1
+#define FALSE 0
+
 int main(void) 
 {
     int num;
 
-    do 
-    {
+    
+    while(TRUE) {
         printf("1. 파일\n");
         printf("2. 편집\n");
         printf("3. 보기\n");
@@ -14,7 +17,7 @@ int main(void)
         scanf("%d", &num);
         if(num == 1 || num == 2 || num == 3) 
             break;
-    } while(1);
+    } 
     printf("선택된 메뉴는 %d\n", num);
 
     return 0;

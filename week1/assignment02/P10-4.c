@@ -9,8 +9,8 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include <stdlib.h> // rand, srand
+#include <time.h>   // time
 
 #define TRUE 1
 int rollDice(int *a, int *b);
@@ -20,7 +20,8 @@ int main(void)
     int d1, d2, d3, d4;
     int res1, res2;
 
-    long seconds = (long)time(NULL);    // main함수내에 넣어야 비길때 초마다 값이 바뀐다.
+    // main함수내에 넣어야 비길때 초마다 값이 바뀐다.
+    long seconds = (long)time(NULL);    
     srand(seconds);
 
     while(TRUE) 

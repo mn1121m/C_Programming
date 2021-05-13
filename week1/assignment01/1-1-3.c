@@ -1,7 +1,6 @@
 /* 1.pdf - 문제 1 */
 
 #include <stdio.h>
-#include <stdlib.h>
 
 #define TRUE 1
 #define FALSE 0

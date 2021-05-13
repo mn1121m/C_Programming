@@ -1,9 +1,7 @@
-#include <stdio.h>
-
 /*
 
 (1) x = F , y = F
-    x ^ y = F , x v y = 0 , ~x = T
+    x ^ y = F , x v y = F , ~x = T
 (2) x = F , y = T
      x ^ y = F , x v y = T , ~x = T
 (3) x = T , y = F

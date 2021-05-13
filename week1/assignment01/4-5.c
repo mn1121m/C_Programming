@@ -9,9 +9,8 @@
 int main(void) 
 {
     int n1, n2;
-    char operator;
-    char yn;
-    char temp; // temp를 함으로써 공간을 하나 만든다. 바로 넘어가지 않기 하기 위해서(enter처리하기 위해서), \n
+    char operator, yn, temp;
+     // temp를 함으로써 공간을 하나 만든다. 바로 넘어가지 않기 하기 위해서(enter처리하기 위해서), \n
 
     while(TRUE) 
     {
@@ -29,15 +28,15 @@ int main(void)
 
         switch (operator)
         {
-        case '+' :  printf(">>> %d + %d = %d\n", n1, n2, n1+n2);    break;
-        case '-' :  printf(">>> %d - %d = %d\n", n1, n2, n1-n2);    break;
-        case '*' :  printf(">>> %d * %d = %d\n", n1, n2, n1*n2);    break;
-        case '/' :  
-            if( n2 == 0 ) printf(">>> Error\n");
-            else {
-                printf(">>> %d / %d = %.2lf\n", n1, n2, (double)n1/(double)n2);
-            }
-            break;
+            case '+' :  printf(">>> %d + %d = %d\n", n1, n2, n1+n2);    break;
+            case '-' :  printf(">>> %d - %d = %d\n", n1, n2, n1-n2);    break;
+            case '*' :  printf(">>> %d * %d = %d\n", n1, n2, n1*n2);    break;
+            case '/' :  
+                if( n2 == 0 ) printf(">>> Error\n");
+                else {
+                    printf(">>> %d / %d = %.2lf\n", n1, n2, (double)n1/(double)n2);
+                }
+                break;
         }
         while(TRUE) 
         {
@@ -47,8 +46,7 @@ int main(void)
 
             if(yn == 'y' || yn == 'Y' || yn == 'n' || yn == 'N') break;
         }
-        if(yn == 'n' || yn == 'N') 
-            break;
+        if(yn == 'n' || yn == 'N') break;
     }
     printf("프로그램을 종료합니다.\n");
     return 0;
