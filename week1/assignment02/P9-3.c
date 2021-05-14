@@ -6,6 +6,27 @@
 
 int main(void)
 {
+    int arr[] = {8, 2, 8}, i;
 
+    printf("ary을 이용한 출력: \n");
+    for(i = 0; i < 3; i ++ ) {
+        printf("%d\t",arr[i]);
+    }
+    printf("\n\n");
+
+    int *p = &arr;
+    printf("p를 이용한 출력: \n");
+    for(i = 0; i < 3; i ++ ) {
+        printf("%d\t",*(p + i));
+    }
     return 0;
 }
+/* 출력결과
+--------------------------
+ary을 이용한 출력: 
+8       2       8
+
+p를 이용한 출력: 
+8       2       8       % 
+--------------------------
+*/

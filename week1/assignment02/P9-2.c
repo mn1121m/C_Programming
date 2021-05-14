@@ -11,7 +11,8 @@ int main(void)
     printf("Before: \n");
     for(i = 0; i < 7; i++) {
         printf("%d\t", data[i]);
-        data[i] = data[i] + 10;
+        data[i] += 10;
+        //*(data + i) += 10;
     }
     printf("\n");
     printf("After: \n");
