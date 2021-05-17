@@ -1,3 +1,4 @@
+/* 실습문제 2 */
 #include <stdio.h>
 
 int gcd(int a, int b);

@@ -1,4 +1,5 @@
 /* 실습문제 1 */
+//질문
 #include <stdio.h>
 
 int main(void) 
