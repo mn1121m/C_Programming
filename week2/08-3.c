@@ -1,4 +1,4 @@
-/* 실습문제 3 */
+/* Practice08 - 실습문제 3 */
 #include <stdio.h>
 
 int isPrime(int x);

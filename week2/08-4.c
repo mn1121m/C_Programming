@@ -1,4 +1,4 @@
-/* 실습문제 4 */
+/* Practice08 - 실습문제 4 */
 /* if <----> else if */
 #include <stdio.h>
 

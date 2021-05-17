@@ -1,4 +1,4 @@
-/* 실습문제 1 */
+/* Practice08 - 실습문제 1 */
 //질문
 #include <stdio.h>
 
