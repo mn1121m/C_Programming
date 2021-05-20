@@ -3,6 +3,8 @@
 */
 #include <stdio.h>
 
+#define TRUE 1
+
 double add(double n1,double n2);
 double sub(double n1,double n2);
 double mul(double n1,double n2);
@@ -14,8 +16,7 @@ int main(void)
     double a, b;
     int op;
     double result;
-    while(1) 
-    {
+    while(TRUE)  {
         printf("******************************\n");
         printf("*   1. 덧셈                  *\n");
         printf("*   2. 뺄셈                  *\n");
@@ -25,6 +26,7 @@ int main(void)
         printf("******************************\n");
         printf("메뉴를 선택하세요 : ");
         scanf("%d", &op);
+
         switch(op) {
         case 1: printf("두 수를 입력하세요 : ");
                 scanf("%lf %lf", &a, &b);
@@ -50,8 +52,6 @@ int main(void)
         }
         printf("\n");
     }
-
-    
 }
 double add(double n1,double n2)
 {
@@ -71,20 +71,13 @@ double div(double n1,double n2)
 }
 void print(double n1, double n2, double result,int op)
 {
-    if(op == 1)
-    {
+    if(op == 1) {
         printf("%.2lf + %.2lf = %.2lf\n", n1, n2, result);
-    }
-    else if(op == 2)
-    {
+    } else if(op == 2) {
         printf("%.2lf - %.2lf = %.2lf\n", n1, n2, result);
-    }
-    else if(op == 3)
-    {
+    }  else if(op == 3) {
         printf("%.2lf * %.2lf = %.2lf\n", n1, n2, result);
-    }
-    else if(op == 4)
-    {
+    } else if(op == 4) {
         printf("%.2lf / %.2lf = %.2lf\n", n1, n2, result);
     }
 }
