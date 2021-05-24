@@ -2,20 +2,23 @@
 //질문
 #include <stdio.h>
 
+void printStar(int n); // 별을 찍는 함수
 int main(void) 
 {
-    int num, i, j, k;
-    printf("양의 정수 입력 : ");
-    scanf("%d", &num);
+    int n = 7;
+    
+    printStar(7);
 
-    for(i = 0; i < num; i ++) {
-        for(j = 0; j < num - i; j++) {
-            printf(" ");
-        }
-        for(k = 0; k < i * 2 + 1; k++) {
-            printf("*");
-        }
-        printf("\n");
-    }
     return 0;
 }   
+
+void printStar(int n)
+{
+    int i, j;
+
+    for(i = 0; i < n/2; i ++) {
+        for(j = 0; j < n/2 - i; j ++) { //i = 1, j = 2번돌아야한다. 
+            printf("#")
+        }
+    }
+}
