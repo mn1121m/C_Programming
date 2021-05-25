@@ -1,5 +1,7 @@
 /* Practice13 - 실습문제 3 */
-//질문 - 포인터를 안쓰고 값을 어떻게 바꾸는건가
+
+// int * sizeof 4 => 동적 배열
+// int [3] sizeof 12 => 정적 배열 
 #include <stdio.h>
 
 void transposingMatrix(int matrix[][100], int n);

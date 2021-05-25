@@ -1,7 +1,10 @@
-/* Practice09 - 실습문제 3 */ 
+/* Practice09 - 실습문제 3 
+*/ 
 #include <stdio.h>
 
 void printAry(int ary[4][4], int size);
+void transpose(int ary[4][4]);
+
 int main(void)
 {
     int ary[4][4], i, j, size = 4;
@@ -33,6 +36,35 @@ void printAry(int ary[4][4], int size)
         printf("\n");
     }
 }
+/*
+ cf)
+ int [4][4] size of => 64
+ int ** size of => 8
+
+void transpose(int ary[4][4])
+{
+    
+    A = [a_{ij}]_{4 * 4}
+    A^T = [a_{ji}]_{4 * 4}
+
+    (i, j) <=> (j, i)
+    1 2 3 4      
+    5 6 7 8 
+    9 10 11 12
+    13 14 15 16 
+    
+    //위치가 swap되는 숫자
+    5
+    9 10
+    13 14 15 
+    
+
+    for(i = 1; i < 4; i ++)     // i = 0 일때는 바뀌는 숫자가 없으므로
+        for(j = 0; j < i; j ++)     // i = 1 , j = 0인 숫자만 바뀐다. 
+            swap(ary[i][j], )
+}
+*/
+
 /*
 출력결과
 --------------------------------

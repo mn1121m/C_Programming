@@ -1,12 +1,16 @@
 /*
 [문제]
 2. 다음 변수 선언 문장에서 문법 오류가 있는 문장을 찾아 수정하시오.
-질문 - 맞는지 확인이 필요할 것 같습니다.
 
 1 전역변수: auto int n;
  => int n;
 2 전역변수: register double yield;
- => double yield
+ => 그대로 
+
+ register   : CPU MEMORY    1MB 가장빠르고 비싸다.
+ MEMORY     : RAM           4GB 보통
+ DISK       : HDD, SSD     1TB  가장싸다.
+
 3 전역변수: global static double data; 
  => static double data;
 4 전역변수: global int age;

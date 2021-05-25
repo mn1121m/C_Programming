@@ -1,6 +1,7 @@
-/* Practice09 - 실습문제 2
+/* Practice09 - 실습문제 2 
+2.정수 배열의 합을 계산하는 함수 int sumArrayOne(int arry[], int size)와 최소값을 찾는 함수 int findMinOne(int arry[], int size)를 구현하고
+이를 이용하여, n x n의 2차원 배열을 입력받아, 합과 최소값을 구하는 프로그램을 작성해보자. (사용자는 2차원 배열의 크기 n을 입력한 후, n x n 배열을 입력한다.)
 */ 
-/* Practice09 - 실습문제 2 */ 
 #include <stdio.h>
 
 #define MAX_ARY 100
