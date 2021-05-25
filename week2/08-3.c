@@ -1,8 +1,13 @@
-/* Practice08 - 실습문제 3 */
+/* Practice08 - 실습문제 3
+사용자로부터 양의 정수를 입력받고, 입력된 정수가 소수인지 아닌지 판별하는 프로그램을 작성한 코드이다. 
+아래 코드를 보고 빈 칸에 들어갈 알맞은 코드를 작성하시오. (2점)
+*/
 #include <stdio.h>
 
-int isPrime(int x);
+#define TRUE 1
+#define FALSE 0
 
+int isPrime(int x);
 int main(void)
 {
     int x;
@@ -15,14 +20,10 @@ int main(void)
 }
 int isPrime(int x)
 {
-    int i, bool;
+    int i;
     for(i = 2; i<= x; i++) {
-        if(x % i == 0 && i < x) {   //not prime = 소수x
-            bool = 0;
-            return bool;
-        }
-        else
-            bool = 1;
+        if(x % i == 0 && i < x)    //not prime = 소수x
+            return FALSE;
     }
-    return bool;
+    return TRUE;
 }
