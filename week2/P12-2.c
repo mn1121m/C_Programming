@@ -4,7 +4,7 @@
 
 1 전역변수: auto int n;
  => int n;
-2 전역변수: register double yield;
+★2 전역변수: register double yield;
  => 그대로 
 
  register   : CPU MEMORY    1MB 가장빠르고 비싸다.

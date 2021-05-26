@@ -1,9 +1,12 @@
 /*
 [문제]
 4. 한 줄의 문자열을 표준입력으로 입력 받아 단어의 문자를 역순으로 출력하는 프로그램을 작성하 시오.
-질문 - gets, putchar 왜 warning이 나오는지 잘 모르겠습니다.
+질문 -() warning: this program uses gets(), which is unsafe.
+=> 이렇게 출력이 되는데 어떻게 해결해야하는지 모르겠습니다..
+관련 교재에서는 정상출력이라고 뜨는데, Mac이라서 그런건지 아니면 제가 무슨 실수를 했는지 모르겠습니다.
+
 */
-#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGSc
 #include <stdio.h>
 #include <string.h>
 
@@ -13,7 +16,7 @@ void reverse(char *line);
 int main(void)
 {
     char line[MAX_ARY] = { 0,};
-    char *delimeter = " ',";
+    char *delimeter = " .,";
     char *ptoken;
 
     printf("한 줄의 문장을 입력하세요. >>\n");
