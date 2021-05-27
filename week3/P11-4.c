@@ -1,10 +1,10 @@
 /*
-[문제]
-4. 한 줄의 문자열을 표준입력으로 입력 받아 단어의 문자를 역순으로 출력하는 프로그램을 작성하 시오.
-질문 -() warning: this program uses gets(), which is unsafe.
-=> 이렇게 출력이 되는데 어떻게 해결해야하는지 모르겠습니다..
-관련 교재에서는 정상출력이라고 뜨는데, Mac이라서 그런건지 아니면 제가 무슨 실수를 했는지 모르겠습니다.
+[문제]  다시()
+4. 한 줄의 문자열을 표준입력으로 입력 받아 단어의 문자를 역순으로 출력하는 프로그램을 작성하시오.
 
+-질문 -
++ warning: this program uses gets(), which is unsafe.
++ 그런데, 이 문제와 비슷한 14-1.c 에서는 잘 출력되는데, 무엇이 문제인지 모르겠습니다.
 */
 #define _CRT_SECURE_NO_WARNINGSc
 #include <stdio.h>
@@ -21,6 +21,7 @@ int main(void)
 
     printf("한 줄의 문장을 입력하세요. >>\n");
     gets(line);
+
     printf("입력한 각각의 단어를 반대로 출력합니다. >>\n");
     ptoken = strtok(line, delimeter);
     while(ptoken != NULL) {
@@ -28,15 +29,14 @@ int main(void)
         putchar(' ');
         ptoken = strtok(NULL, delimeter);
     }
-
     return 0;
 }
 void reverse(char *line)
 {
-    char *ch = line;
+    char ch = *line;
     while(ch) {
         reverse(++line);
-        printf("%s", ch);
+        printf("%c", ch);
     }
     return;
 }
@@ -44,4 +44,7 @@ void reverse(char *line)
 출력결과
 한 줄의 문장을 입력하세요. >>
 warning: this program uses gets(), which is unsafe.
+i can feel the sun whenever you're near
+입력한 각각의 단어를 반대로 출력합니다. >>
+zsh: segmentation fault  ./main
 */

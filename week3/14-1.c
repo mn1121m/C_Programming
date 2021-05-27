@@ -1,13 +1,15 @@
 /*
-Practice14 -1
+Practice14 -1   다시()
 1. 한 줄의 문장을 표준입력으로 입력받아 각각의 단어를 구성하는 문자를 역순으로 출력하는 프로그램을 작성하시오. (2점)
-다시풀기()
+
+소요: 1H
 */
 
 #include <stdio.h>
 #include <string.h>
 
 #define MAX_ARY 100
+
 void reverse(char *line);
 
 int main(void)
@@ -27,7 +29,6 @@ int main(void)
         putchar(' ');   // => 각각의 문자열을 출력할때 문자사이에 공백을 넣기위해서이다.
         pword = strtok(NULL, delimeter);
     }
-    printf("\n");
     return 0;
 }
 void reverse(char *line)
@@ -38,3 +39,11 @@ void reverse(char *line)
         printf("%c", ch);
     }
 }
+
+/*
+출력결과
+
+char a[] = “cars”;
+
+rahc ][a = ;“srac”
+*/

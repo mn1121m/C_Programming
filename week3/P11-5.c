@@ -1,8 +1,10 @@
 /*
-[문제]
+[문제]  다시()
 5. 한 행을 표준입력으로 입력 받은 문자열의 길이를 구하는 함수 mystrlen()을 구현하여 라이브러 리 strlen()과 결과를 비교하는 프로그램을 작성하시오.
-질문 -()문제4번과 같은 오류가 뜹니다. => warning: this program uses gets(), which is unsafe.
-그리고 문제5번에 대한 출력결과랑 다른데, 어떤점을 고쳐야 하는지 못찾겠습니다.
+
+-질문 -
++ 문제4번과 같은 오류가 뜹니다. => warning: this program uses gets(), which is unsafe.
++ 그리고 문제5번에 대한 출력결과랑 다른데, 어떤점을 고쳐야 하는지 못찾겠습니다.
 */
 #include <stdio.h>
 #include <string.h>
