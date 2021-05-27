@@ -1,4 +1,3 @@
-
 /*
 Practice14 -5   다시()
 5. 3줄 문장을 입력받아 행마다 입력된 문자열에서 모든 단어를 추출하여 추출된 단어가 몇 개인지 
@@ -14,11 +13,11 @@ Practice14 -5   다시()
 #include <stdio.h>
 #include <string.h>
 
-#define MAX_LINE_NUM 100
+#define MAX_LINE_SIZE 100
 
 int main(void)
 {
-    char line[3][MAX_LINE_NUM] = {0, }, lineMax[MAX_LINE_NUM] = {0 ,};
+    char line[3][MAX_LINE_SIZE] = {0, }, lineMax[MAX_LINE_SIZE] = {0 ,};
     char *delimeter = " .,!\t", *ptr, *ptoken;
     int lineNum = 0, count = 0, i = 0; // Line number
     //lineMax :   string with the max length of a line (한 줄)
