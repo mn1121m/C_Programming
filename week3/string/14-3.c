@@ -7,7 +7,6 @@ Practice14 -3
 
 소요: 1H
 */
-
 #include <stdio.h>
 #include <string.h>
 
@@ -49,7 +48,7 @@ int main(void)
         }else
             break;
     }
-    printf("종료\n");
+    printf("일치합니다. (종료)\n");
     return 0;
 }
  /*

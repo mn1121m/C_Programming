@@ -24,7 +24,7 @@ int main(void)
     
     printf("입력한 문자열 역순으로 출력 => : ");
     pword = strtok(line, delimeter);
-    while(pword != NULL) {
+    while(pword != '\0') {
         reverse(pword);
         putchar(' ');   // => 각각의 문자열을 출력할때 문자사이에 공백을 넣기위해서이다.
         pword = strtok(NULL, delimeter);

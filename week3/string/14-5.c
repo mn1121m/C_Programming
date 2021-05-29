@@ -32,7 +32,7 @@ int main(void)
         //Initialize max length in the current line
         strcpy(lineMax, ptoken);
 
-        while(ptoken != NULL) {
+        while(ptoken != '\0') {
             //get the token with the max length in the line
             if(strlen(lineMax) < strlen(ptoken)) {
                 strcpy(lineMax, ptoken);

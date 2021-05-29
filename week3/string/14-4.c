@@ -31,10 +31,12 @@ int main(void)
         maxline++;
         if(i == 3) break;
     }
+    //포인터에서 NULL 표현할때 : NULL
+    //문자열에서 NULL 표현할때 : '\0'
 
     for(i = 0; i < maxline; i ++) {
         printf("\n%d줄의 구두점\n", i+1);
-        for(j = 0; line[i][j] != NULL; j ++) {
+        for(j = 0; line[i][j] != '\0'; j ++) {
             if(ispunct(line[i][j])) {
                 printf("%c", line[i][j]);
                 count++;
