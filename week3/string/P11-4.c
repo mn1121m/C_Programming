@@ -2,9 +2,9 @@
 [문제]  다시()
 4. 한 줄의 문자열을 표준입력으로 입력 받아 단어의 문자를 역순으로 출력하는 프로그램을 작성하시오.
 
--질문 -
-+ warning: this program uses gets(), which is unsafe.
+-질문 - ok
 + 그런데, 이 문제와 비슷한 14-1.c 에서는 잘 출력되는데, 무엇이 문제인지 모르겠습니다.
+=> 재귀함수에서는 재귀자체가 반복문이므로, while문같은 반복문을 쓸 수 없다.
 */
 #define _CRT_SECURE_NO_WARNINGSc
 #include <stdio.h>
@@ -20,11 +20,11 @@ int main(void)
     char *ptoken;
 
     printf("한 줄의 문장을 입력하세요. >>\n");
-    gets(line);
+    fgets(line, sizeof(line), stdin);
 
-    printf("입력한 각각의 단어를 반대로 출력합니다. >>\n");
+    printf("\n입력한 각각의 단어를 반대로 출력합니다. >> ");
     ptoken = strtok(line, delimeter);
-    while(ptoken != NULL) {
+    while(ptoken) {
         reverse(ptoken);
         putchar(' ');
         ptoken = strtok(NULL, delimeter);
@@ -34,7 +34,7 @@ int main(void)
 void reverse(char *line)
 {
     char ch = *line;
-    while(ch) {
+    if (ch) {
         reverse(++line);
         printf("%c", ch);
     }

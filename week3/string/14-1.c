@@ -1,4 +1,5 @@
 /*
+중요
 Practice14 -1   다시()
 1. 한 줄의 문장을 표준입력으로 입력받아 각각의 단어를 구성하는 문자를 역순으로 출력하는 프로그램을 작성하시오. (2점)
 
@@ -19,12 +20,12 @@ int main(void)
     char *pword;
 
     printf("문자열을 입력하세요 : ");
-    gets(line);
+    fgets(line, sizeof(line), stdin);
     printf("입력한 문자열 출력 => : %s\n", line);
     
     printf("입력한 문자열 역순으로 출력 => : ");
     pword = strtok(line, delimeter);
-    while(pword != '\0') {
+    while(pword != NULL) {
         reverse(pword);
         putchar(' ');   // => 각각의 문자열을 출력할때 문자사이에 공백을 넣기위해서이다.
         pword = strtok(NULL, delimeter);
