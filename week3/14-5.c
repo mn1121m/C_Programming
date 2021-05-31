@@ -27,8 +27,8 @@ int main(void)
     // Read 3 lines
     for(i = 0; i < 3; i ++ ) {
         fgets(line[i], sizeof(line[i]), stdin);
-        line[i][strlen(line[i]) - 1] = '\0';    //*중요*
-
+        //  *중요*  마지막 enter -> '\0' 바꾸기 하기 위함 
+        line[i][strlen(line[i]) - 1] = '\0';
         ptr = line[i];
         ptoken = strtok(ptr, delimeter);
 
