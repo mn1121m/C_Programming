@@ -10,7 +10,7 @@ Practice14 -3
 #include <stdio.h>
 #include <string.h>
 
-#define MAX_PWD_ARY 100
+#define MAX_PWD_ARY 128
 #define TRUE 1
 
 int main(void)
@@ -42,7 +42,7 @@ int main(void)
             printf("Retry\n"); 
             continue;
         }
-        //비교
+        //비교 strcmp() : 같으면 0, 다르면 0이 아닌값
         if(strcmp(pwd_ary, pwd2_ary)) {
             printf("Retry\n");
         }else

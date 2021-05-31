@@ -1,6 +1,6 @@
 /*
 중요
-Practice14 -1   다시()
+Practice14 -1   다시(0)
 1. 한 줄의 문장을 표준입력으로 입력받아 각각의 단어를 구성하는 문자를 역순으로 출력하는 프로그램을 작성하시오. (2점)
 
 소요: 1H
@@ -9,7 +9,7 @@ Practice14 -1   다시()
 #include <stdio.h>
 #include <string.h>
 
-#define MAX_ARY 100
+#define MAX_ARY 128
 
 void reverse(char *line);
 

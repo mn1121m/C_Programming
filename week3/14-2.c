@@ -8,7 +8,7 @@ Practice14 -2
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX_STR 100
+#define MAX_STR 128
 
 int main(void)
 {

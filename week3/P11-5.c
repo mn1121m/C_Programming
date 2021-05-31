@@ -3,18 +3,22 @@
 5. 한 행을 표준입력으로 입력 받은 문자열의 길이를 구하는 함수 mystrlen()을 구현하여 
 라이브러리 strlen()과 결과를 비교하는 프로그램을 작성하시오.
 
+-질문-
+fgets() 쓰면 실행없이 바로 종료되는데 왜그러는 걸까요 ?
 */
 #include <stdio.h>
 #include <string.h>
 
 int mystrlen(const char* p);
 
+#define MAX_STR 128
 int main(void)
 {
-    char str[100] = {0, };
+    char str[MAX_STR] = {0, };
     char *ptoken;
     char *delimeter = " .,";
 
+    // fgets(str, strlen(str), stdin);  => 바로 종료됨.
     gets(str);
     ptoken = strtok(str, delimeter);
     
