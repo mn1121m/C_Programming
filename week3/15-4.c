@@ -2,6 +2,7 @@
 Practice15 - 4
 
 소요: 0.5H
+따로 해결강의 나올 예정
 */
 
 #include <stdio.h>

@@ -18,15 +18,17 @@ Practice14 -5   다시(0)(0)
 int main(void)
 {
     //lineMax :   string with the max length of a line (한 줄)
-    char line[3][MAX_LINE_SIZE] = {0, }, lineMax[MAX_LINE_SIZE] = {0 ,};
+    char line[3][MAX_LINE_SIZE], lineMax[MAX_LINE_SIZE];
     char *delimeter = " .,!\t", *ptr, *ptoken;
     int count = 0, i = 0;
 
-    printf("총 3줄을 입력하세요\n\n");
+    printf("총 3줄을 입력하세요\n");
 
     // Read 3 lines
     for(i = 0; i < 3; i ++ ) {
         fgets(line[i], sizeof(line[i]), stdin);
+        line[i][strlen(line[i]) - 1] = '\0';    //*중요*
+
         ptr = line[i];
         ptoken = strtok(ptr, delimeter);
 
@@ -42,8 +44,7 @@ int main(void)
             count++;
         }
         //각 길이중 가장 큰 길이, 갯수
-        //printf("\nstrlen(%s) = %d\n", lineMax, strlen(lineMax)-1);
-
+        printf("strlen(%s) = %d\n", lineMax, strlen(lineMax));
     }
     //Print out the count
     printf("\n총 단어 갯수: %d\n", count);
@@ -57,6 +58,6 @@ int main(void)
 int ispunct( int c )
 Returns a true value if c is a printing character other than 
 a space, a digit, or a letter and returns 0 otherwise.
-총 단어 갯수: 30
+총 단어 갯수: 28
 가장 큰 길이: otherwise
 */

@@ -1,66 +1,76 @@
 /*
 Practice15 - 3
-
--질문-
-strtok() 함수를 이용해서 구하는건데, while()문안에 어떻게 구현해야할지 모르겠습니다.
-
-소요: 1.5H 이상
+다시()
+소요: 2H 이상
 */
 
 #include <stdio.h>
 #include <string.h>
 
 #define MAX_NAME_SIZE 128
-#define MAX_STR 128
 
 #define TRUE 1
 
 typedef struct {
-    char name[MAX_NAME_SIZE];
+    char firstName[MAX_NAME_SIZE];
+    char secondName[MAX_NAME_SIZE];
     char subject[MAX_NAME_SIZE];
     int score;
-} score;
+} Record;
 
-void calsum(score *r);
-void printRec(score r);
+void printRec(Record *r, int size);
 
 int main(void)
 {
-    score std[MAX_STR];
-    char *delimeter = ",", *ptoken;
-    int i = 0, count = 0;
-    double avg;
+    int debugCount = 0;
+    int recNum = 0;
+    Record record[MAX_NAME_SIZE];
 
     //input
-    printf("학생이름\t과목이름\t점수 입력하세요 \n");
-    scanf("%s %s %d", std[i].name, std[i].subject, &std[i].score);
-    ptoken = strtok(std, delimeter);
-    while(strcmp(std, "quit") != NULL) {
-        printf("학생이름\t과목이름\t점수 입력하세요 \n");
-        scanf("%s %s %d", std[i].name, std[i].subject, &std[i].score);
-        i++;
-        count++;
-        ptoken = strtok(NULL, delimeter);
+    printf("[입력] : 학생이름\t과목이름\t점수\n");
+    while(TRUE) {
+        debugCount ++;
+        scanf("%s", record[recNum].firstName);
+        if(strcmp(record[recNum].firstName, "quit") == 0) 
+            break;
+        scanf("%s %s %d",  
+        record[recNum].secondName, 
+        record[recNum].subject, 
+        &(record[recNum].score)
+        );
+        getchar();  //scanf() enter방지하기 위함.
+        printf("[DEBUG] : %d\n", debugCount);
+        record[recNum].secondName[strlen(record[recNum].secondName) - 1] = '\0'; // , -> '\0'
+        record[recNum].subject[strlen(record[recNum].subject) - 1] = '\0';
+        recNum ++;
     }
-
-    //sum
-    for(i = 0; i < count; i ++) {
-        calsum(&std[i]);
-    }
-    
     //print
-    for(i = 0; i < count; i ++) {
-        printRec(std[i]);
-    }
-    printf("avg = %lf\n", avg);
+    printf("\n[결과]\n");
+    printRec(record, recNum);
+
     return 0;
 }
-void calsum(score *r)
-{
-    int i, sum = 0;
-    sum += (*r).score;
-}
-void printRec(score r)
+
+void printRec(Record *r, int size)
 {   
-    printf("%s\t%s\t%d\n", r.name, r.subject, r.score);
+    int i, sum = 0;
+
+    for(i = 0; i < size; i ++) {
+        printf("%s %s \t %s \t %d\n", r[i].firstName, r[i].secondName, r[i].subject, r[i].score);
+        sum += r[i].score;
+    }
+    printf("avg = %d\n", sum/size);
 }
+/*
+kim nemo, math, 90
+lee minwoo, eng, 80 
+lee miso, eng, 100 
+park chul, math, 50 
+quit 
+
+kim nemo    math    90 
+lee minwoo  eng     80
+lee miso    eng     100
+park chul   math    50
+avg=80
+*/
