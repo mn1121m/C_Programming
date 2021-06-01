@@ -1,3 +1,6 @@
+/*
+Practice16 - 1
+*/
 #include <stdio.h>
 
 void recursive(int num);
@@ -21,3 +24,10 @@ void recursive(int num)
     }
     return;
 }
+/*
+입력 : 24589
+결과 : 98542%                                                                                        
+
+입력 : 25316
+결과 : 61352%       
+*/
