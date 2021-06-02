@@ -2,10 +2,10 @@
 구조체
 practice 18 - 2
 
-소요: 1.5H
+소요: 2H
 - 질문 - 
-+ 이름, 주소 관해서 띄어쓰기 포함해서 입력하는 방법에 대해서 결국 못찾았습니다.
-+ 솔직히 따로 입력받는 구현은 할 수 있는데, 한번에 입력받고 구현하는 것을 모르겠습니다.
++ 입력에 대한 구현이 이렇게 하는 건지 궁금합니다.
++ 좀더 깔끔하거나 수정해야할게 있으면 말씀해주시면 감사하겠습니다!
 */
 #include <stdio.h>
 #include <string.h>
@@ -23,28 +23,41 @@ typedef struct {
 
 int main(void)
 {
-    Employee employee[MAX_ARY_SIZE] = {0 ,}
+    Employee employee[MAX_ARY_SIZE] = {0 ,};
     int i;
     double annualIncome[MAX_ARY_SIZE];
     
     //input
+    printf("[DEBUG]; \n");
     for(i = 0; i < 3; i ++) {
-        scanf("%d", &employee[i].id);
+        printf("1\n");
+        scanf("%d", &employee[i].id);   //scanf() : enter까지 한꺼번에 키보드 버퍼에 들어갑니다. 
+        getchar();                      //버퍼에 찌꺼기처럼 남아있는 enter를 소비시켜 버리기 위해 공백을 만들어준다.
+        
+        printf("2\n");
         fgets(employee[i].name, sizeof(employee[i].name), stdin);
         employee[i].name[strlen(employee[i].name) - 1] = '\0';
+        
+        printf("3\n");
         fgets(employee[i].address, sizeof(employee[i].address), stdin);
         employee[i].address[strlen(employee[i].address) - 1] = '\0';
         // scanf("%[^\n]s", employee[i].name);
         // scanf("%[^\n]s", employee[i].address);
+        
+        printf("4\n");
         scanf("%d", &employee[i].salary);
+        getchar();
+        
+        printf("5\n");
         scanf("%lf", &employee[i].incentive);
+        getchar();
 
         annualIncome[i] = employee[i].salary * (12 + employee[i].incentive);
     }
 
     //output
     for(i = 0; i < 3; i ++) {
-        printf("%d\t%s\t%s\t%d\t%%%lf\t%.1lf\n"
+        printf("%d\t%s\t%s\t%d %.0lf%%\t%.1lf\n"
         , employee[i].id
         , employee[i].name
         , employee[i].address
@@ -56,3 +69,8 @@ int main(void)
 
     return 0;
 }
+/*
+20211   김지혜  서울시 구로구 고척동    1200000 120%    15840000.0
+20212   김자경  경기도 안양시 비산동    1500000 150%    20250000.0
+20213   강동구  인천광역시 간석동       1800000 180%    24840000.0
+*/
