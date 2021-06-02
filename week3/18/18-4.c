@@ -30,11 +30,9 @@ int main(void)
     double slopeValue;  //기울기 값
     double yValue;      //y절편 값
 
-    printf("입력(1)\n");
     scanf("%lf %lf", &p1.x, &p1.y);
     getchar();
 
-    printf("입력(2)\n");
     scanf("%lf %lf", &p2.x, &p2.y);
     getchar();
 
@@ -61,15 +59,11 @@ double cal2Yintercept(point p1, double s1)
     return yres;
 }
 /*
-입력(1)
 100 100
-입력(2)
 200 200
 결과 : 1.0 0.0%   
 ------------------------------
-입력(1)
 0 -60
-입력(2)
 150 30
 결과 : 0.6 -60.0%  
 */
