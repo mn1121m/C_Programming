@@ -1,4 +1,1 @@
-Founded in a garage in 1976 by Steve Jobs, Steve Wozniak, and Ronald Wayne, 
-Apple began as a personal computer pioneer that today makes everything from laptops to portable media players. 
-Headquartered in Cupertino, California, the consumer electronics giant entered the smartphone market with the iPhone in 2007
-, and the tablet market with the iPad in 2010, and the smartwatch market with the Apple Watch in 2014.
+Apple announced the switch to Intel chips seven years ago because they ran faster and generated less heat than the products built by Motorola Inc. and International Business Machines Corp. that Apple had used. 

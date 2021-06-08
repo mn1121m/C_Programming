@@ -14,7 +14,6 @@ practice 20 - 1 다시()
 cf) fgets(텍스트를 저장할 메모리의 주소, 메모리의 최대크기, 파일 포인터)
 */
 #include <stdio.h>
-#include <stdlib.h>
 
 #define MAX_LENGTH 256
 

@@ -6,6 +6,8 @@ practice 22 - 5 다시()
 아래 주어진 코드는 변경하지 말고 사용할 것. (2점)
 
 소요: 30M
+- 질문 - 
+InsertNode 그림으로 한번만 설명부탁드립니다!
 */
 
 #include <stdio.h>
@@ -42,7 +44,6 @@ NODE *insertHead(NODE *h, double data)
 
     node = (NODE*)malloc(sizeof(NODE));
     node->data = data;
-
     node->next = h;
     h = node;
 
