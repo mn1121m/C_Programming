@@ -24,15 +24,13 @@ int main(int argc, char **argv)
     char buf[MAX_LENGTH];
     int line_count = 0;
 
-    if((fp = fopen("test.txt", "r")) == NULL) {
+    scanf("%s", &buf);
+
+    if((fp = fopen(buf, "r")) == NULL) {
         printf("Cannot open the file.\n");
         exit(EXIT_FAILURE);
     }
-    //파일에서 텍스트를 한 줄씩 읽어오기
-    // while(fgets(buf, MAX_LENGTH, fp) != NULL) {
-    //     line_count++;
-    //     printf("[%d]번째 줄: %s", line_count, buf);
-    // }
+
     while(fgets(buf, MAX_LENGTH, fp) != NULL) {
         printf("%s", buf);
     }
