@@ -64,3 +64,12 @@ int main(void)
     fclose(fp2);
     return 0;
 }
+
+/*
+data.txt
+Apple announced the switch to Intel chips seven years ago because they ran faster and generated less heat than the products built by Motorola Inc. and International Business Machines Corp. that Apple had used. %
+
+========================================================================================
+out.txt
+APPLE ANNOUNCED THE SWITCH TO INTEL CHIPS SEVEN YEARS AGO BECAUSE THEY RAN FASTER AND GENERATED LESS HEAT THAN THE PRODUCTS BUILT BY MOTOROLA INC. AND INTERNATIONAL BUSINESS MACHINES CORP. THAT APPLE HAD USED. %
+*/
