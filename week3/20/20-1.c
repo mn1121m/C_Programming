@@ -1,5 +1,5 @@
 /* 
-practice 20 - 1 다시()
+practice 20 - 1 -> ok
 
 1. 텍스트 파일 이름을 입력받아 해당 파일의 내용을 읽어서 그 내용을 표준출력으로 출력하는 프로그램을 작성하시오. (2점)
 
@@ -9,7 +9,8 @@ practice 20 - 1 다시()
 ∙파일 입출력이 종료된 후에는 반드시 파일을 닫는다.
 
 - 질문 - 
-+ 파일의 이름을 입력받고 그것을 화면에 출력하는 것에 대한 구현과정..
++ 20-1 , 20-1_1 한 코드말고 다른 답안이 있을까요 ?
+
 
 cf) fgets(텍스트를 저장할 메모리의 주소, 메모리의 최대크기, 파일 포인터)
 */
@@ -22,17 +23,15 @@ int main(int argc, char **argv)
 {
     FILE *fp;
     char buf[MAX_LENGTH];
-    int line_count = 0;
+    int i;
 
-    if((fp = fopen("test.txt", "r")) == NULL) {
+    scanf("%s", buf);
+
+    if((fp = fopen(buf, "r")) == NULL) {
         printf("Cannot open the file.\n");
         exit(EXIT_FAILURE);
     }
-    //파일에서 텍스트를 한 줄씩 읽어오기
-    // while(fgets(buf, MAX_LENGTH, fp) != NULL) {
-    //     line_count++;
-    //     printf("[%d]번째 줄: %s", line_count, buf);
-    // }
+    
     while(fgets(buf, MAX_LENGTH, fp) != NULL) {
         printf("%s", buf);
     }
@@ -41,16 +40,9 @@ int main(int argc, char **argv)
     return 0;
 }
 /*
-[data.txt]
-=>
-Founded in a garage in 1976 by Steve Jobs, Steve Wozniak, and Ronald Wayne, 
-Apple began as a personal computer pioneer that today makes everything from laptops to portable media players. 
-Headquartered in Cupertino, California, the consumer electronics giant entered the smartphone market with the iPhone in 2007
-, and the tablet market with the iPad in 2010, and the smartwatch market with the Apple Watch in 2014.%   
+data.txt
+Apple announced the switch to Intel chips seven years ago because they ran faster and generated less heat than the products built by Motorola Inc. and International Business Machines Corp. that Apple had used. %
 
-[test.txt]
-=>
-Apple has big plans for the MacBook Pro in 2021 with a redesign expected to turn the 13in model into a 14in MacBook Pro. 
-There are many more new features coming to the range
-, including a more powerful version of Apple's M1 chip (which arrived in the entry-level models in 2020) and new screen technology%   
+test.txt
+The Mac maker has in the past few years acquired chip companies, added engineers and created designs based on technology from ARM Holdings Plc (ARM) for its best-selling iPhone and iPad. % 
 */

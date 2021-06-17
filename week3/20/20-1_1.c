@@ -1,5 +1,5 @@
 /* 
-practice 20 - 1 다시()
+practice 20 - 1 다시(ok)
 
 1. 텍스트 파일 이름을 입력받아 해당 파일의 내용을 읽어서 그 내용을 표준출력으로 출력하는 프로그램을 작성하시오. (2점)
 
@@ -7,9 +7,6 @@ practice 20 - 1 다시()
 ∙파일의 이름을 입력받고 해당 파일을 읽기 모드로 연다.
 ∙반복문을 사용하여 텍스트 파일을 읽어 화면에 출력한다.
 ∙파일 입출력이 종료된 후에는 반드시 파일을 닫는다.
-
-- 질문 - 
-+ 파일의 이름을 입력받고 그것을 화면에 출력하는 것에 대한 구현과정..
 
 cf) fgets(텍스트를 저장할 메모리의 주소, 메모리의 최대크기, 파일 포인터)
 */
@@ -24,13 +21,15 @@ int main(int argc, char **argv)
     char buf[MAX_LENGTH];
     int line_count = 0;
 
-    scanf("%s", &buf);
-
-    if((fp = fopen(buf, "r")) == NULL) {
+    if((fp = fopen("test.txt", "r")) == NULL) {
         printf("Cannot open the file.\n");
         exit(EXIT_FAILURE);
     }
-
+    //파일에서 텍스트를 한 줄씩 읽어오기
+    // while(fgets(buf, MAX_LENGTH, fp) != NULL) {
+    //     line_count++;
+    //     printf("[%d]번째 줄: %s", line_count, buf);
+    // }
     while(fgets(buf, MAX_LENGTH, fp) != NULL) {
         printf("%s", buf);
     }
