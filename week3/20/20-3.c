@@ -19,7 +19,6 @@ practice 20 - 3
 #define MAX_STUDENT_SIZE 128
 #define TRUE 1
 
-
 typedef struct _student {
     char name[MAX_NAME_SIZE];
     int kor, mat, eng, sum;
@@ -32,22 +31,21 @@ int main(void)
     int i, j, res;
     student stu[MAX_STUDENT_SIZE];
 
-    if(rfp == NULL || wfp == NULL) 
+    if(rfp == NULL || wfp == NULL) // fprintf(stderr, "Insufficient memory\n"); exit(EXIT_FAULEURE); 와 다르게 하고 싶어서 해봤습니다.
         return 1;
     
+    i = 0;  // while문 밖에서 초기화해야한다. 
     while(TRUE) {
-        i = 0;  // 학생 수 
         res = fscanf(rfp, "%s%d%d%d", stu[i].name, &stu[i].kor, &stu[i].mat, &stu[i].eng);
         if( res == EOF ) 
             break;
-
+        // printf(" i = %d\n", i);
         //파일의 데이터를 받아서 배열에 저장
         stu[i].sum = stu[i].kor + stu[i].mat + stu[i].eng;
         stu[i].avg = stu[i].sum / 3.0;
         fprintf(wfp, "%s\t%d\t%d\t%d\t%.2lf\n", stu[i].name, stu[i].kor, stu[i].mat, stu[i].eng, stu[i].avg);
         i++;
     }
-
     fclose(rfp);
     fclose(wfp);
     return 0;
