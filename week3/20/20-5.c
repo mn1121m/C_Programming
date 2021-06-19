@@ -8,6 +8,10 @@ practice 20 - 5
 ∙file1에 존재하는 모든 숫자를 순서대로 file2에 쓰고, 합계를 화면에 출력한다.
 
 cf) 20-4.c 에서 이미 'file1.txt' 을 쓰고 있기 때문에 file-1.txt, file-2.txt로 정정하여 쓰겠습니다.
+
+- 질문 - 
++ zsh: segmentation fault  ./main <- 다음과 같은 에러가 생겼는데 왜 그런걸까요 ?
+
 */
 #include <stdio.h>
 #include <stdlib.h>
