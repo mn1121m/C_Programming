@@ -14,7 +14,7 @@ int main(void)
     }
     printf("\n\n");
 
-    int *p = &arr;
+    int *p = arr;
     printf("p를 이용한 출력: \n");
     for(i = 0; i < 3; i ++ ) {
         printf("%d\t",*(p + i));
