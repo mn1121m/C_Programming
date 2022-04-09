@@ -1,7 +1,9 @@
 # C_programming
 
-This is a repository for my solved problems.
+
+## Study 
 - C언어와 관련된 기초문제 및 심화문제에 대한 코드를 정리하였습니다.
+- This is a repository for my solved problems.
 
 
 ## Text Book
